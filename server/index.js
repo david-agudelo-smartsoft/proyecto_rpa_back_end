@@ -1,8 +1,6 @@
-import express from 'express';
-import clientRoutes from './routes/client.routes.js'
 import { connectDB } from './database.js'
 import { PORT } from './config.js'
-const app = express()
+import app from './app.js'
 connectDB();
 
 app.use(clientRoutes)
