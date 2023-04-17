@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { getAgent, createAgent, updateAgent } from '../controllers/agent.controllers.js'
+import { getAgents, createAgent, updateAgent } from '../controllers/agent.controllers.js'
 const router = Router()
 
-router.get('/agent', getAgent);
+router.get('/agent', getAgents);
 router.post('/agent', createAgent);
 router.put('/agent', updateAgent);
 
