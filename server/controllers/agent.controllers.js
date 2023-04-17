@@ -2,7 +2,7 @@ import Agent from '../models/agent.model.js'
 
 export const getAgents = async (req, res) => {
     try {
-        const agent = await Agent.findx()
+        const agent = await Agent.find()
         res.send(agent)
     } catch (error) {
         return res.status(500).json({ message: error.message })
@@ -11,10 +11,10 @@ export const getAgents = async (req, res) => {
 
 export const createAgent = async (req, res) => {
     try {
-        const { name, status, identifier } = req.body
-        const Newagent = new Agent({ name, status, identifier })
-        await Newagent.save()
-        return res.json(Newagent)
+        const { name, status } = req.body
+        const NewAgent = new Agent({ name, status })
+        await NewAgent.save()
+        return res.json(NewAgent)
     } catch (error) {
         return res.status(500).json({ message: error.message })
     }

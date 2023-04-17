@@ -12,7 +12,24 @@ const agentSchema = new mongoose.Schema({
         trim: true
     },
     lastConnection: {
-        type: Date,
+        type: {
+            dateTime: {
+                type: Date,
+                required: false,
+            },
+            ostype: {
+                type: String,
+                required: false,
+            },
+            hostame: {
+                type: String,
+                required: false,
+            },
+            ipaddress: {
+                type: String,
+                required: false,
+            },
+        },
         required: false,
     },
     createdAt: {
