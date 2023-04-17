@@ -6,6 +6,4 @@ router.get('/client', getClient);
 router.post('/client', createClient);
 router.put('/client', updateClient);
 
-
-
 export default router

@@ -5,9 +5,7 @@ import { PORT } from './config.js'
 const app = express()
 connectDB();
 
-
 app.use(clientRoutes)
-
 
 app.listen(PORT);
 console.log('Server in running port: ', PORT);
