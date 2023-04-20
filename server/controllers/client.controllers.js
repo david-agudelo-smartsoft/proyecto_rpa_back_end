@@ -2,7 +2,7 @@ import Client from '../models/client.model.js'
 
 export const getClients = async (req, res) => {
     try {
-        const client = await Client.findx()
+        const client = await Client.find()
         res.send(client)
     } catch (error) {
         return res.status(500).json({ message: error.message })
