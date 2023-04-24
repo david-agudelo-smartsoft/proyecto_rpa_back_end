@@ -4,6 +4,7 @@ const router = Router()
 
 router.get('/client', getClients);
 router.post('/client', createClient);
-router.put('/client', updateClient);
+router.put('/client/:id', updateClient);
+router.get('/client/:id', getClient);
 
 export default router

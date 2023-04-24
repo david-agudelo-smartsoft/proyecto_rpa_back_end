@@ -9,17 +9,6 @@ export const getTasks = async (req, res) => {
     }
 }
 
-export const createTask = async (req, res) => {
-    try {
-        const { name, status, version, compatibility, ttlRequest, ttlResult, maximumAttempts } = req.body
-        const NewTask = new Task({ name, status, version, compatibility, ttlRequest, ttlResult, maximumAttempts })
-        await NewTask.save()
-        return res.json(NewTask)
-    } catch (error) {
-        return res.status(500).json({ message: error.message })
-    }
-}
-
 export const updateTask = async (req, res) => {
     try {
         const updaDateTask = await Task.findByIdAndUpdate(req.params.id, req.body, { new: true });
