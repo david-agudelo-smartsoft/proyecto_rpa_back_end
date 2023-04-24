@@ -40,6 +40,10 @@ const taskSchema = new mongoose.Schema({
                 type: String,
                 required: true,
             },
+            numeroPlaca: {
+                type: String,
+                required: true,
+            },
         },
         required: true,
     },
